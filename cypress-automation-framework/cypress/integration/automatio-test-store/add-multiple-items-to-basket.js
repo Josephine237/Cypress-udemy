@@ -13,6 +13,9 @@ describe('Add multiple items to basket', () => {
     })
 
     beforeEach(() => {
+        cy.clearLocalStorage();     // takhle před každým testem všechno vyčistíme
+        cy.clearCookies();
+
         autoStore_Homepage_PO.accessHomepage();
         autoStore_Homepage_PO.clickOn_HairCare_Button();
     })

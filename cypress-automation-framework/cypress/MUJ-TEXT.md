@@ -37,3 +37,6 @@ VIEWPORT: když zadám cy.viewport(width, height) tak můžu optimalizovat podob
             - můžu třeba dát cy.viewport('iphone-6')
             - dáváme to na začátek, třeba do before
             - pokud chceme všechny testy v jiném okně, tak to upravíme v cypress.json, tam ale musíme zadat oba parametry => "viewportHeight": 1080, "viewportWidth": 1920
+
+CLEARCOOKIES: cypress automaticky čistí všechny cookies před každým testem
+                - cy.clearLocalStorage(); cy.clearCookies();
