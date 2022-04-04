@@ -8,6 +8,8 @@ class Contact_Us_PO {
         //assertace
         cy.get($selector).contains(textToLocate, {timeout: 20000})        // todle je super, když mam u každého testu jinou asertaci s jiným selektorem, tak použiju toto, a do funkce pak dám název selektoru který chci
                 // pauzu můžeme použít i tady v assertaci   cy.get($selector).pause().contains(textToLocate, {timeout: 20000}) 
+        cy.screenshot();
+        cy.screenshot("Made a contact us form submission")      // screenshoty můžeme i pojmenovat
     }
 }   
 

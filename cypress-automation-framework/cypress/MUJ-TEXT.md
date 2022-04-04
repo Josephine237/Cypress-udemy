@@ -24,3 +24,11 @@ Dynamic Global Url: napsáno pomocí env cypress.json
 WAIT: kdybychom ale měli dávat wait 3000 do každého testu a měli jich třeba 200, tak bychom nedělali nic jiného než čekali, takže většinou se používá wait for exist nebo tak něco
 
 Pokud se mi stránka otevírá v dalším okně použiji invoke: .invoke('removeAttr', 'target').click({force:true})
+
+SCREENSHOT: v cypressu je defaultně vytvořená složka screenshots, kam se ukládají screenshoty pomocí cy.screenshot()
+            - složka pro screenshoty je defaultně nastavená, pokud jí chci změnit, tak to udělám v cypress.json
+            - pokud pouštím test, konkrétní test, cypress udělá screenshot automaticky když test selže
+            - dejte jsi pozor, kde screenshoty píšeme
+
+VIDEO: opět je defautně vytvořená složka videos
+        - videa se ale nenahrávají automaticky
