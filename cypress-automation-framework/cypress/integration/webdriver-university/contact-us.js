@@ -56,6 +56,9 @@ import HomePage_PO from '../../support/pageObjects/webdriver-uni/Homepage_PO'
 import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO' 
 
         describe('Test Contact Us form via WebdriverUni', () => {
+            // tímto přepíšu defautní nastavení pro tento soubor testů
+            Cypress.config('defaultCommandTimeout', 20000)
+
             const homepage_PO = new HomePage_PO();
             const contact_Us_PO = new Contact_Us_PO(); 
 
@@ -73,7 +76,10 @@ import Contact_Us_PO from '../../support/pageObjects/webdriver-uni/Contact_Us_PO
                 // cy.visit(Cypress.env("webdriveruni_homapage" + "/Contact-Us/contactus.html"))        // hmmm todle nefunguje
 
                 homepage_PO.visitHomepage();
-                homepage_PO.clickOn_ContactUs_Button()
+                cy.wait(3000);          // kdybychom ale měli dávat wait 3000 do každého testu a měli jich třeba 200, tak bychom nedělali nic jiného než čekali
+                homepage_PO.clickOn_ContactUs_Button();
+                // cy.pause();         // toto mi zastaví test, pauzne, můžu ho pak znovu zase rozjet, když kliknu na tlačítko play
+
             })
         
             it('Should be able to submit a successful submission via contact us form', () => {
