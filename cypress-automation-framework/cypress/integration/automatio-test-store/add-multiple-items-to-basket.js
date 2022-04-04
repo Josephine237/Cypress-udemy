@@ -25,7 +25,7 @@ describe('Add multiple items to basket', () => {
         // })
         // cy.get('.dropdown-toggle > .fa').click();    
         
-        autoStore_HairCare_PO.addHairCareProductsToBasket()
+        autoStore_HairCare_PO.addHairCareProductsToBasket();
     });
 });
 

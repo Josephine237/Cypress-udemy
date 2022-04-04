@@ -23,3 +23,4 @@ Dynamic Global Url: napsáno pomocí env cypress.json
 
 WAIT: kdybychom ale měli dávat wait 3000 do každého testu a měli jich třeba 200, tak bychom nedělali nic jiného než čekali, takže většinou se používá wait for exist nebo tak něco
 
+Pokud se mi stránka otevírá v dalším okně použiji invoke: .invoke('removeAttr', 'target').click({force:true})
