@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />           
+/// <reference types="cypress" />           
 
         // toto je kod, který musíme vždy umístit nahoru pokud chceme psát cypress. Je to proto, aby počítač rozuměl, které příkazy má brát př: pokud tam toto nedáme a budeme chtít napsat cy. tak se nám to změní na crypto
 
